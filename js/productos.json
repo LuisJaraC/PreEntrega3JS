@@ -1,0 +1,56 @@
+[
+    {
+        "id": "Bristol-Original",
+        "titulo": "Bristol Original",
+        "imagen": "../img/bristol original.jpg",
+        "precio": 5000
+    },
+    {
+        "id": "Bristol-Caramelo",
+        "titulo": "Bristol Caramelo",
+        "imagen": "../img/bristol caramelo.png",
+        "precio": 5000
+    },
+    {
+        "id": "Bristol-Uva",
+        "titulo": "Bristol Uva",
+        "imagen": "../img/bristol uva.png",
+        "precio": 5000
+    },
+    {
+        "id": "Amsterdamer-Uva",
+        "titulo": "Amsterdamer Uva",
+        "imagen": "../img/Amsterdamer_Uva.jpg",
+        "precio": 4700
+    },
+    {
+        "id": "Amsterdamer-Vainilla",
+        "titulo": "Amsterdamer Vainilla",
+        "imagen": "../img/amsterdamer vanilla.jpg",
+        "precio": 4700
+    },
+    {
+        "id": "Amsterdamer-Manzana",
+        "titulo": "Amsterdamer Manzana",
+        "imagen": "../img/Amsterdamer apple.jpg",
+        "precio": 4700
+    },
+    {
+        "id": "Choice-Uva",
+        "titulo": "Choice Uva",
+        "imagen": "../img/choice-uva.jpg",
+        "precio": 4000
+    },
+    {
+        "id": "Choice-Chocolate-Negro",
+        "titulo": "Choice Chocolate Negro",
+        "imagen": "../img/choice dark chocolate.jpg",
+        "precio": 4000
+    },
+    {
+        "id": "Choice-Original",
+        "titulo": "Choice Original",
+        "imagen": "../img/choice original.png",
+        "precio": 4000
+    }
+]

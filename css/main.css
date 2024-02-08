@@ -14,14 +14,15 @@ a {
 
 .contenido-todo {
 
-    background-color: rgb(29, 29, 146);
+    background-color: #1d1d92;
     
 
     .header {
         display: flex;
         justify-content: space-between;
         padding: 5rem;
-        color: white;
+        color: #ffffff;
+        
 
         .logo{
             font-family: "climate crisis";
@@ -30,7 +31,7 @@ a {
     
     .texto-footer {
         text-align: center;
-        color: gray;
+        color: #808080;
         font-size: 1rem;
     }
 }
@@ -169,3 +170,6 @@ main {
 .disabled{
     display: none;
 }
+
+/* Login */
+

@@ -1,66 +1,19 @@
-const productos =[
-    {
-        id: "Bristol-Original",
-        titulo: "Bristol Original",
-        imagen: "./img/bristol original.jpg",
-        precio: 5000
-    },
-    {
-        id: "Bristol-Caramelo",
-        titulo: "Bristol Caramelo",
-        imagen: "./img/bristol caramelo.png",
-        precio: 5000
-    },
-    {
-        id: "Bristol-Uva",
-        titulo: "Bristol Uva",
-        imagen: "./img/bristol uva.png",
-        precio: 5000
-    },
-    {
-        id: "Amsterdamer-Uva",
-        titulo: "Amsterdamer Uva",
-        imagen: "./img/Amsterdamer_Uva.jpg",
-        precio: 4700
-    },
-    {
-        id: "Amsterdamer-Vainilla",
-        titulo: "Amsterdamer Vainilla",
-        imagen: "./img/amsterdamer vanilla.jpg",
-        precio: 4700
-    },
-    {
-        id: "Amsterdamer-Manzana",
-        titulo: "Amsterdamer Manzana",
-        imagen: "./img/Amsterdamer apple.jpg",
-        precio: 4700
-    },
-    {
-        id: "Choice-Uva",
-        titulo: "Choice Uva",
-        imagen: "./img/choice-uva.jpg",
-        precio: 4000
-    },
-    {
-        id: "Choice-Chocolate-Negro",
-        titulo: "Choice Chocolate Negro",
-        imagen: "./img/choice dark chocolate.jpg",
-        precio: 4000
-    },
-    {
-        id: "Choice-Original",
-        titulo: "Choice Original",
-        imagen: "./img/choice original.png",
-        precio: 4000
-    },
-]
+let productos = [];
 
+fetch("./js/productos.json")
+    .then(response => response.json())
+    .then(data =>{
+        productos = data;
+        cargarProductos(productos)
+    })
 
 
 const contenedorProductos = document.querySelector("#contenedor-productos");
 let botonesAgregar = document.querySelectorAll(".producto-agregar");
 
 function cargarProductos(){
+
+    
     productos.forEach(producto => {
 
         const div = document.createElement("div");
@@ -78,7 +31,7 @@ function cargarProductos(){
     actualizarBotonAgregar();
 }
 
-cargarProductos();
+
 
 function actualizarBotonAgregar(){
     botonesAgregar = document.querySelectorAll(".producto-agregar");
@@ -101,6 +54,23 @@ if(productosEnCarritoLS){
 
 function agregarAlCarrito(e){
 
+    Toastify({
+        text: "Producto agregado",
+        duration: 2500,
+        destination: "",
+        newWindow: false,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "left", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #1d1d92, #808080",
+          borderRadius: "2rem",
+          border: "solid #000000"
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+
     const idBoton = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.id === idBoton);
 
@@ -122,8 +92,10 @@ const numerito = document.querySelector("#numerito")
 function actualizarNumerito() {
     let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito
-
+    
 }
+
+actualizarNumerito();
 /*
 <div class="producto">
                     <img class="producto-imagen" src="./img/bristol original.jpg" alt="tabaco bristol original">
